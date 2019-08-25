@@ -3,6 +3,8 @@ spring:
     active:
       - dev
 ---
+server:
+  port: 8201
 spring:
   profiles: dev
   application:
@@ -10,8 +12,10 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-dev.com:8077/eureka
+      defaultZone: http://edmin:mldnjava@eureka-dev.com:8077/eureka
 ---
+server:
+  port: 8202
 spring:
   profiles: beta
   application:
@@ -19,5 +23,5 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-beta.com:8077/eureka
+      defaultZone: http://edmin:mldnjava@eureka-beta.com:8077/eureka
 ---
