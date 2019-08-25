@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active:
+      - dev
+---
+spring:
+  profiles: dev
+  application:
+    name: mocroconfig-config-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-dev.com:8077/eureka
+---
+spring:
+  profiles: beta
+  application:
+    name: mocroconfig-config-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-beta.com:8077/eureka
+---
